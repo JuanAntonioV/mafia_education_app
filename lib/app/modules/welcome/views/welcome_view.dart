@@ -12,6 +12,7 @@ class WelcomeView extends GetView<WelcomeController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+<<<<<<< HEAD
       body: CustomScrollView(
         slivers: [
           SliverFillRemaining(
@@ -85,6 +86,17 @@ class WelcomeView extends GetView<WelcomeController> {
             ),
           )
         ],
+=======
+      appBar: AppBar(
+        title: const Text('WelcomeView'),
+        centerTitle: true,
+      ),
+      body: const Center(
+        child: Text(
+          'WelcomeView is working',
+          style: TextStyle(fontSize: 20),
+        ),
+>>>>>>> parent of 62a13ba (update: header title alignment)
       ),
     );
   }
