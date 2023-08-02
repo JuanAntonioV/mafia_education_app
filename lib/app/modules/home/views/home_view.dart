@@ -30,6 +30,10 @@ class HomeView extends GetView<HomeController> {
           ElevatedButton(
             onPressed: _handleOnClick,
             child: const Text('Go to WelcomeView'),
+          ),
+          OutlinedButton(
+            onPressed: () {},
+            child: const Text('Go to WelcomeView'),
           )
         ],
       )),
