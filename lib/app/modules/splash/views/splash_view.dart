@@ -19,13 +19,13 @@ class SplashView extends GetView<SplashController> {
               children: [
                 Image.asset(
                   'assets/images/logo.png',
-                  width: 192,
+                  width: 260,
                 ),
               ],
             ),
           ),
           const Positioned(
-            bottom: 60,
+            bottom: 80,
             left: 0,
             right: 0,
             child: Center(

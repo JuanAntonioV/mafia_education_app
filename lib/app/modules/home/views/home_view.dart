@@ -15,28 +15,25 @@ class HomeView extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('HomeView'),
-        centerTitle: false,
-      ),
       body: Center(
-          child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          const Text(
-            'HomeView is working',
-            style: TextStyle(fontSize: 20),
-          ),
-          ElevatedButton(
-            onPressed: _handleOnClick,
-            child: const Text('Go to WelcomeView'),
-          ),
-          OutlinedButton(
-            onPressed: () {},
-            child: const Text('Go to WelcomeView'),
-          )
-        ],
-      )),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Text(
+              'HomeView is working',
+              style: TextStyle(fontSize: 20),
+            ),
+            ElevatedButton(
+              onPressed: _handleOnClick,
+              child: const Text('Go to WelcomeView'),
+            ),
+            OutlinedButton(
+              onPressed: () {},
+              child: const Text('Go to WelcomeView'),
+            )
+          ],
+        ),
+      ),
     );
   }
 }
