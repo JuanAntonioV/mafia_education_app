@@ -11,7 +11,7 @@ class WelcomeView extends GetView<WelcomeController> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('WelcomeView'),
-        centerTitle: true,
+        centerTitle: false,
       ),
       body: const Center(
         child: Text(
