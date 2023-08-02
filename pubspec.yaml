@@ -2,20 +2,21 @@ name: mafia_education_app
 version: 1.0.0+1
 publish_to: none
 description: Mafia Education Application Project
-environment: 
-  sdk: '>=2.19.6 <3.0.0'
+environment:
+    sdk: '>=2.19.6 <3.0.0'
 
-dependencies: 
-  cupertino_icons: ^1.0.2
-  get: 4.6.5
-  flutter: 
-    sdk: flutter
+dependencies:
+    cupertino_icons: ^1.0.2
+    get: 4.6.5
+    flutter:
+        sdk: flutter
 
-dev_dependencies: 
-  flutter_lints: ^2.0.0
-  flutter_test: 
-    sdk: flutter
+dev_dependencies:
+    flutter_lints: ^2.0.0
+    flutter_test:
+        sdk: flutter
 
-flutter: 
-  uses-material-design: true
-
+flutter:
+    uses-material-design: true
+    assets:
+        - assets/images/
