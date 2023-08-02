@@ -15,13 +15,6 @@ class HomeView extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-<<<<<<< HEAD
-=======
-      appBar: AppBar(
-        title: const Text('HomeView'),
-        centerTitle: true,
-      ),
->>>>>>> parent of 62a13ba (update: header title alignment)
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

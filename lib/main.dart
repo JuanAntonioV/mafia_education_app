@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
-import 'package:mafia_education_app/app/modules/splash/bindings/splash_binding.dart';
 import 'package:mafia_education_app/app/themes/app_theme.dart';
 
 import 'app/routes/app_pages.dart';
@@ -21,7 +20,6 @@ class MainApp extends StatelessWidget {
       theme: AppTheme.lightTheme,
       initialRoute: AppPages.initial,
       getPages: AppPages.routes,
-      initialBinding: SplashBinding(),
     );
   }
 }
