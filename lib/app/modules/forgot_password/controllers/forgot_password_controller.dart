@@ -2,12 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:mafia_education_app/app/routes/app_pages.dart';
 
-class RegisterController extends GetxController {
+class ForgotPasswordController extends GetxController {
   RxString email = ''.obs;
-  RxString fullName = ''.obs;
-  RxString password = ''.obs;
-  RxBool isPasswordVisible = false.obs;
-  final isTermsAgreed = false.obs;
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
 
   @override
@@ -25,23 +21,12 @@ class RegisterController extends GetxController {
     super.onClose();
   }
 
-  void togglePasswordVisibility() {
-    isPasswordVisible.toggle();
-  }
-
-  void handleTermsAgreement(bool? newValue) {
-    isTermsAgreed.value = newValue!;
-  }
-
-  void register() {
+  void forgotPassword() {
     if (formKey.currentState!.validate()) {
       formKey.currentState!.save();
 
       final payload = {
         'email': email.value,
-        'fullName': fullName.value,
-        'password': password.value,
-        'isTermsAgreed': isTermsAgreed.value,
       };
 
       print(payload);
@@ -49,8 +34,8 @@ class RegisterController extends GetxController {
       Get.offNamed(Routes.LOGIN);
 
       Get.snackbar(
-        'Registrasi Berhasil',
-        'Silakan login untuk melanjutkan',
+        'Reset Password Berhasil',
+        'Silakan cek email untuk melanjutkan',
         snackPosition: SnackPosition.BOTTOM,
         duration: const Duration(seconds: 2),
         animationDuration: const Duration(milliseconds: 200),

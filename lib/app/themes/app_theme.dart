@@ -45,6 +45,40 @@ class AppTheme {
           shape: const StadiumBorder(),
         ),
       ),
+      inputDecorationTheme: const InputDecorationTheme(
+        contentPadding: EdgeInsets.symmetric(
+          vertical: 16,
+          horizontal: 16,
+        ),
+        labelStyle: TextStyle(fontSize: 14),
+        hintStyle: TextStyle(fontSize: 10),
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.all(
+            Radius.circular(10.0),
+          ),
+        ),
+      ),
+      checkboxTheme: CheckboxThemeData(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(3.0),
+        ),
+        fillColor: MaterialStateProperty.resolveWith((states) {
+          if (states.contains(MaterialState.disabled)) {
+            return Colors.grey; // Disabled checkbox color
+          } else if (states.contains(MaterialState.selected)) {
+            return Colors.blue; // Checked checkbox color
+          }
+          return Colors.grey; // Unchecked checkbox color
+        }),
+        checkColor: MaterialStateProperty.resolveWith((states) {
+          if (states.contains(MaterialState.disabled)) {
+            return Colors.grey; // Disabled checkbox check color
+          } else if (states.contains(MaterialState.selected)) {
+            return Colors.white; // Checked checkbox check color
+          }
+          return Colors.grey; // Unchecked checkbox check color
+        }),
+      ),
     );
   }
 }
